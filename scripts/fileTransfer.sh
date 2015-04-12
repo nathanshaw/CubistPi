@@ -1,4 +1,4 @@
-#/bin/sh
+#/bin/bash
 
 #  cubistPi.sh
 #  
@@ -7,10 +7,14 @@
 #
 
 clear
-echo copying files to macBook
-sshpass -p "ns098930" scp -r /home/pi/cubistpi/pictures nathan@10.0.1.13:/users/nathan/desktop/cubistPics
+echo "copying files to macBook"
+sshpass -p "ns098930" scp -r /home/pi/CubistPi/media nathan@10.0.1.13:/users/nathan/desktop/cubistPics
 
-ls -t | sed -e '1,50d' | xargs -d '\n' rm
+cd /home/pi/CubistPi/pictures
+echo "Moving to /CubistPi/pictures"
+
+#If you want script to keep x number files before deleting change 50 to x
+ls -t | sed -e '1,10d' | xargs -d '\n' rm
 echo "Geting rid of Extra Files"
 
 
