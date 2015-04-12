@@ -10,8 +10,8 @@ clear
 echo "copying files to macBook"
 sshpass -p "ns098930" scp -r /home/pi/CubistPi/media nathan@10.0.1.13:/users/nathan/desktop/cubistPics
 
-cd /home/pi/CubistPi/pictures
-echo "Moving to /CubistPi/pictures"
+cd /home/pi/CubistPi/media
+echo "Moving to /CubistPi/media"
 
 #If you want script to keep x number files before deleting change 50 to x
 ls -t | sed -e '1,10d' | xargs -d '\n' rm
