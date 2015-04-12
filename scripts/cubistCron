@@ -1,0 +1,3 @@
+#cronjob for running BASH script fileTransfer
+
+* * * * * sudo /home/pi/CubistPi/scripts/fileTransfer.sh
