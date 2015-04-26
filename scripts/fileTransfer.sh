@@ -14,7 +14,7 @@ cd /home/pi/CubistPi/media
 echo "Moving to /CubistPi/media"
 
 #If you want script to keep x number files before deleting change 50 to x
-ls -t | sed -e '1,1d' | xargs -d '\n' rm
+ls -t | sed -e '1,2d' | xargs -d '\n' rm
 echo "Geting rid of Extra Files"
 
 
